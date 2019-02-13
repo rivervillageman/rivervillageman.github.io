@@ -218,14 +218,15 @@ header {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    padding: 0 15px;
   }
-    .header-in .item.fig {
-      flex: 0;
-    }
+    .header-in .item.fig { flex: 0;}
+    .header-in .item.fig img { width: 200px;}
     .header-in .item.profile {
       flex: 0;
       padding-left: 0;
     }
+    .dl-profile { font-size: 1.2rem;}
   h1.name {
     font-size: 2.4rem;
   }
