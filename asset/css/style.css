@@ -26,7 +26,7 @@ input, textarea, select
 textarea
 { resize: none;}
 button
-{ border: none; overflow: visible; background: none; vertical-align: top;	font-size: 100%; color: inherit; cursor: pointer; -webkit-appearance: none;}
+{ border: none; overflow: visible; background: none; vertical-align: top;	font-size: 100%; color: inherit; cursor: pointer; -webkit-appearance: none; outline-style: none;}
 label
 { cursor: pointer;}
 table
@@ -92,6 +92,8 @@ html { width: 100%; height: 100%; overflow-y: scroll;}
 body { width: 100%; font-size: 1.6rem;}
 h1 { font-size: 2.4rem;}
 
+
+/* particles */
 #particles-js {
   width: 100vw;
   height: 100vh;
@@ -104,6 +106,7 @@ h1 { font-size: 2.4rem;}
   background: #000022;
 }
 
+/* header */
 header {
   width: 100vw;
   height: 100vh;
@@ -152,6 +155,7 @@ header {
     padding-left: 15px;
   }
 
+/* main */
 .main {}
 
 .article {
@@ -163,11 +167,12 @@ header {
   z-index: -2;
 }
 
-.article h1 {
-   margin-bottom: 20px;
-   display: inline-block;
+.article h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  display: inline-block;
 }
-  .article h1::after {
+  .article h2::after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -175,16 +180,35 @@ header {
     height: 5px;
     background: linear-gradient(to right,#fce4ed,#ffe8cc);
   }
-  .article.inverse h1::after {
+  .article.inverse h2::after {
     background: linear-gradient(to left, #743ad5, #d53a9d);
   }
-
 
 .section {
   max-width: 1024px;
   margin: 0 auto;
   padding: 75px 15px 100px;
 }
+
+/* list */
+.list-experience > li:not(:first-child) {
+  margin-top: 50px;
+}
+  .list-experience > li > span {
+    display: block;
+    font-size: 1.0rem;
+  }
+  .list-experience > li > span.company {
+    color: #7e7e8d;
+  }
+.list-experience-detail {
+  padding-top: 20px;
+}
+  .list-experience-detail li {
+    font-size: 1.2rem;
+    list-style-type: circle;
+    margin-left: 1.5rem;
+  }
 
 .list-skills {
   display: flex;
@@ -196,6 +220,10 @@ header {
     margin: .3rem .3rem .3rem;
     border-radius: 10px;
   }
+  .inverse .list-skills li {
+    background: linear-gradient(to left, #743ad5, #d53a9d);
+  }
+
 
 .list-languages {
   display: flex;
@@ -228,6 +256,17 @@ header {
         background: linear-gradient(to left, #743ad5, #d53a9d);
       }
 
+#myBtn {
+  display: block;
+  position: fixed;
+  bottom: -100px;
+  right: 30px;
+  z-index: 99;
+  cursor: pointer;
+  font-size: 2.4rem;
+  transition: all .65s;
+}
+
 @media only screen and (max-width: 768px) {
   .header-in {
     display: flex;
@@ -242,9 +281,7 @@ header {
       padding-left: 0;
     }
     .dl-profile { font-size: 1.2rem;}
-  h1.name {
-    font-size: 2.4rem;
-  }
+
   .section {padding: 25px 15px 50px;}
   .list-languages {
     flex-flow: column nowrap;
